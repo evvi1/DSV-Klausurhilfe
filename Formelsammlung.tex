@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{scrartcl}
+
+\renewcommand{\sectfont}{\sffamily}
+
+\usepackage[ngerman]{babel}
+\usepackage[margin=1.5cm]{geometry}
+
+\begin{document}
+{\centering{\usekomafont{disposition}
+    \LARGE Digitale Signalverarbeitung --- Klausurhilfe}\\[1ex]
+  Tim Hilt\\
+  \today
+  \par}
+
+\tableofcontents
+
+\[H(z) = A(z) \cdot (1 - z^{-1}) \qquad\Rightarrow\qquad A(z) = \frac{H(z)}{1 - z^{-1}} = \frac{zH(z)}{z-1}\]
+
+\[a_{kT} = a_{kT - T} + h_{kT} \qquad\Rightarrow\qquad h_{kT} = a_{kT} - a_{kT - T}\]
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
