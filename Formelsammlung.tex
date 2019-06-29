@@ -1,9 +1,9 @@
-\documentclass[12pt,a4paper]{scrartcl}
+\documentclass[10pt,a5paper]{scrartcl}
 
 \renewcommand{\sectfont}{\sffamily}
 
 \usepackage[ngerman]{babel}
-\usepackage[margin=1.5cm]{geometry}
+\usepackage[margin=2.5cm]{geometry}
 
 \begin{document}
 {\centering{\usekomafont{disposition}
@@ -12,11 +12,21 @@
   \today
   \par}
 
+\vfill
+
 \tableofcontents
+\clearpage
 
 \[H(z) = A(z) \cdot (1 - z^{-1}) \qquad\Rightarrow\qquad A(z) = \frac{H(z)}{1 - z^{-1}} = \frac{zH(z)}{z-1}\]
 
 \[a_{kT} = a_{kT - T} + h_{kT} \qquad\Rightarrow\qquad h_{kT} = a_{kT} - a_{kT - T}\]
+
+\section{Differenzengleichung aus System erstellen}
+
+\begin{enumerate}
+\item Einführung von Variablen an den Ausgängen sämtlicher Addierer
+\item Aufstellen von Gleichungen an den Ausgängen aller Addierer
+\end{enumerate}
 
 \end{document}
 
