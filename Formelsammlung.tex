@@ -3,9 +3,10 @@
 \renewcommand{\sectfont}{\sffamily}
 
 \usepackage[ngerman]{babel}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[bottom=2cm, left=1cm, right=1cm, top=1cm]{geometry}
 
 \begin{document}
+\sffamily
 {\centering{\usekomafont{disposition}
     \LARGE Digitale Signalverarbeitung --- Klausurhilfe}\\[1ex]
   Tim Hilt\\
@@ -32,8 +33,37 @@
 
 \[\tilde{H}(z) = \frac{L_0 \cdot z^N + L_1 \cdot z^{N-1} + L_2 \cdot z^{N-2} + \ldots+ L_N}{z^N - K_1 \cdot z^{N-1} - K_2\cdot z^{N-2} - \ldots - K_N}\]
 
-\end{document}
+\section{Stabilität eines zeitdiskreten Systems}
 
+Ein zeitdiskretes System ist dann stabil, wenn die Pole der \(z\)-transformierten Übertragungsfunktion in der \(z\)-Ebene innerhalb oder auf dem Einheitskreis liegen; d.h.\ wenn gilt:
+
+\[|z_{pi}| \leq 1, \qquad i \in 1, 2, \ldots , N\]
+
+\section{Impulsantwort des Systems}
+
+Ist nach der Impulsantwort des Systems gefragt, so kann der Ausgang des Systems \(h(kT) = y(kT)\) verwendet werden.
+
+\section{Amplitudengang $H(f)$ aus $H(z)$ berechnen}
+
+Ist die \(z\)-Übertragungsfunktion \(\tilde{H}(z)\) bekannt und der Amplitudengang gesucht, kann beachtet werden, dass die Frequenzen von \(f = 0\) bis \(f = f_T/2\) in der \(z\)-Ebene abgelesen werden können, wenn auf dem Einheitskreis von \(1\) nach \(-1\) gegangen wird. Demnach wäre \(f_T/4\) bei \(j\).
+
+\section{Sprungantwort $a(kT)$ mit $k \rightarrow \infty$}
+
+Ist der Konvergenzwert / stationäre Endwert der Sprungantwort \(a(kT)\) eines Systems gesucht, so kann in die \(z\)-Übertragungsfunktion \(\tilde{H}(z)\) für \(z = 1\) eingesetzt werden, um den richtigen Wert zu erhalten.
+
+\[\lim_{k \rightarrow \infty}a(kT) = \sum_{i=0}^k h(kT) = \tilde{H}(z = 1)\]
+
+\section{Realisierbarkeit von Systemen}
+
+Für eine realisierbare Funktion muss gelten:
+
+\begin{enumerate}
+\item Die Übertragungsfunktion muss eine gebrochen-rationale Funktion sein (\(\frac{z^2+z}{z^3+z+1}\))
+\item Die Übertragungsfunktion muss reelle Koeffizienten haben
+\item Der Zählergrad muss kleiner oder gleich dem Nennergrad sein
+\end{enumerate}
+
+\end{document}
 
 %%% Local Variables:
 %%% mode: latex
