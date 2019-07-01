@@ -1,22 +1,29 @@
-\documentclass[10pt,a5paper]{scrartcl}
-
-\renewcommand{\sectfont}{\sffamily}
+\documentclass[twoside,10pt,a5paper]{scrartcl}
 
 \usepackage[ngerman]{babel}
 \usepackage[bottom=2cm, left=1cm, right=1cm, top=1cm]{geometry}
+\usepackage{booktabs}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
 
 \begin{document}
 \sffamily
+
+\vspace*{1cm}
+
 {\centering{\usekomafont{disposition}
     \LARGE Digitale Signalverarbeitung --- Klausurhilfe}\\[1ex]
   Tim Hilt\\
   \today
   \par}
 
-\vfill
+\vspace{2cm}
 
 \tableofcontents
 \clearpage
+
+\section{Umformung Impulsantwort $\mathbf{\Leftrightarrow}$ Sprungantwort}
 
 \[H(z) = A(z) \cdot (1 - z^{-1}) \qquad\Rightarrow\qquad A(z) = \frac{H(z)}{1 - z^{-1}} = \frac{zH(z)}{z-1}\]
 
@@ -62,6 +69,23 @@ Für eine realisierbare Funktion muss gelten:
 \item Die Übertragungsfunktion muss reelle Koeffizienten haben
 \item Der Zählergrad muss kleiner oder gleich dem Nennergrad sein
 \end{enumerate}
+
+\section{FIR (Finite-Impulse-Response)-Filter}
+
+\subsection{Filterklassen}
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \toprule
+    & Achsensymmetrie & Punktsymmetrie\\
+    \midrule
+    gerader Grad \(N\) & Klasse 1 & Klasse 2\\
+    ungerader Grad \(N\) & Klasse 3 & Klasse 4\\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Der Grad kann ermittelt werden, indem in der Impulsantwort \(h(kT)\) die \textbf{Anzahl der Verzögerungen} gezählt wird.
 
 \end{document}
 
